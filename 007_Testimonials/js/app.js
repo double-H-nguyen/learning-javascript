@@ -46,9 +46,9 @@
   // add event listenrs to buttons
   btns.forEach(function (btn, index) {
     if (btn.className == "btn prevBtn") {
-      btn.addEventListener("click", prevMsg);
+      btn.addEventListener("click", prevTestimonial);
     } else if (btn.className == "btn nextBtn") {
-      btn.addEventListener("click", nextMsg);
+      btn.addEventListener("click", nextTestimonial);
     }
   });
 
@@ -56,7 +56,7 @@
     updateTestimonial(index);
   }
 
-  function prevMsg() {
+  function prevTestimonial() {
     customerIndex -= 1;
     if (customerIndex < 0) {
       customerIndex = customers.length - 1;
@@ -64,7 +64,7 @@
     updateTestimonial(customerIndex);
   }
 
-  function nextMsg() {
+  function nextTestimonial() {
     customerIndex += 1;
     if (customerIndex > customers.length - 1) {
       customerIndex = 0;
